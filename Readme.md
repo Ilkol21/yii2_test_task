@@ -39,7 +39,7 @@ return [
 mkdir -p web/uploads/books
 
 ▶️ Running the Application
-./yii serve
+php yii serve
 
 
 After running, the app will be available at:
