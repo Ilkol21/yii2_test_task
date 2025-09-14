@@ -21,6 +21,8 @@ cd yii2-book-catalog
 composer install
 
 3. Database Setup
+
+In file config/db.php:
 <?php
 
 return [
