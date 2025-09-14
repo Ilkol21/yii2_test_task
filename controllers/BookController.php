@@ -44,8 +44,8 @@ class BookController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
             if ($model->upload()) {
-                if ($model->save(false)) { // false, бо валідація вже пройшла
-                    Yii::$app->session->setFlash('success', 'Книга успішно створена.');
+                if ($model->save(false)) {
+                    Yii::$app->session->setFlash('success', 'The book has been successfully created..');
                     return $this->redirect(['index']);
                 }
             }
@@ -68,7 +68,7 @@ class BookController extends Controller
                     $model->image = $oldImage;
                 }
                 if ($model->save(false)) {
-                    Yii::$app->session->setFlash('success', 'Книга успішно оновлена.');
+                    Yii::$app->session->setFlash('success', 'The book has been successfully updated..');
                     return $this->redirect(['index']);
                 }
             }
@@ -86,7 +86,7 @@ class BookController extends Controller
             @unlink('uploads/books/' . $model->image);
         }
         $model->delete();
-        Yii::$app->session->setFlash('success', 'Книга успішно видалена.');
+        Yii::$app->session->setFlash('success', 'The book has been successfully deleted.');
 
         return $this->redirect(['index']);
     }

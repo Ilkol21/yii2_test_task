@@ -43,7 +43,6 @@ class AuthorController extends Controller
         if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
             Yii::$app->response->format = Response::FORMAT_JSON;
             if ($model->save()) {
-                // Відправляємо сигнал про успіх
                 return ['success' => true];
             } else {
                 return ActiveForm::validate($model);

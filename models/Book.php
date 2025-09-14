@@ -35,12 +35,12 @@ class Book extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Назва',
-            'description' => 'Короткий опис',
-            'image' => 'Зображення',
-            'publication_date' => 'Дата опублікування',
-            'imageFile' => 'Файл зображення',
-            'author_ids' => 'Автори',
+            'title' => 'Name',
+            'description' => 'Brief description',
+            'image' => 'Image',
+            'publication_date' => 'Date of publication',
+            'imageFile' => 'Image file',
+            'author_ids' => 'Authors',
         ];
     }
 
